@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人网站 | 博客</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B82F6',
+            secondary: '#10B981',
+            dark: '#1E293B',
+            light: '#F8FAFC'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .blog-card-hover {
+        @apply hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+      }
+      .tag-pill {
+        @apply inline-block text-xs font-medium px-3 py-1 rounded-full;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-dark antialiased">
+  <!-- 导航栏 -->
+  <header id="navbar" class="fixed w-full top-0 z-50 bg-white shadow-md">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-primary">
+        <span class="fa fa-code mr-2"></span>个人网站
+      </a>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="font-medium hover:text-primary transition-colors">首页</a>
+        <a href="portfolio.html" class="font-medium hover:text-primary transition-colors">作品集</a>
+        <a href="blog.html" class="font-medium text-primary transition-colors">博客</a>
+        <a href="about.html" class="font-medium hover:text-primary transition-colors">关于我</a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menuBtn" class="md:hidden text-2xl">
+        <i class="fa fa-bars"></i>
+      </button>
+    </nav>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="index.html" class="font-medium hover:text-primary transition-colors py-2">首页</a>
+        <a href="portfolio.html" class="font-medium hover:text-primary transition-colors py-2">作品集</a>
+        <a href="blog.html" class="font-medium text-primary transition-colors py-2">博客</a>
+        <a href="about.html" class="font-medium hover:text-primary transition-colors py-2">关于我</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 页面标题 -->
+  <section class="pt-24 pb-12 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">我的空间</h1>
+        <p class="text-gray-600 text-lg">分享设计文章、开发技巧，记录成长的每一步</p>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- 博客列表 -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 博客文章1 -->
+        <article class="bg-white rounded-xl overflow-hidden shadow-md blog-card-hover">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://picsum.photos/seed/blog1/600/400" alt="现代CSS框架对比" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="tag-pill bg-blue-100 text-primary">前端开发</span>
+              <span class="text-sm text-gray-500"><i class="fa fa-calendar-o mr-1"></i> 2025-10-15</span>
+            </div>
+            <h2 class="text-xl font-bold mb-3 hover:text-primary transition-colors">
+              <a href="blog-post1.html">现代CSS框架对比：Tailwind vs Bootstrap</a>
+            </h2>
+            <p class="text-gray-600 mb-4 line-clamp-3">
+              深入比较当今最流行的两个CSS框架，分析它们的优缺点和适用场景。通过实际项目案例，展示不同框架在开发效率、性能和维护成本上的差异...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <img src="https://picsum.photos/seed/author1/100/100" alt="作者头像" class="w-10 h-10 rounded-full object-cover">
+                <span class="ml-3 text-sm font-medium"></span>
+              </div>
+              <a href="blog-post1.html" class="text-primary font-medium hover:underline inline-flex items-center">
+                 <i class="fa fa-long-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 博客文章2 -->
+        <article class="bg-white rounded-xl overflow-hidden shadow-md blog-card-hover">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://picsum.photos/seed/blog2/600/400" alt="提升网站转化率的UX技巧" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="tag-pill bg-green-100 text-secondary">用户体验</span>
+              <span class="text-sm text-gray-500"><i class="fa fa-calendar-o mr-1"></i> 2025-09-28</span>
+            </div>
+            <h2 class="text-xl font-bold mb-3 hover:text-primary transition-colors">
+              <a href="blog-post2.html">从零开始学习网站制作</a>
+            </h2>
+            <p class="text-gray-600 mb-4 line-clamp-3">
+              网站制作是一项有趣且实用的技能。从完全不懂代码到能够独立开发一个简单的网站， 我经历了一段充满挑战但收获满满的旅程。在这...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <img src="https://picsum.photos/seed/author1/100/100" alt="作者头像" class="w-10 h-10 rounded-full object-cover">
+                <span class="ml-3 text-sm font-medium"></span>
+              </div>
+              <a href="blog-post2.html" class="text-primary font-medium hover:underline inline-flex items-center">
+                 <i class="fa fa-long-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 博客文章3 -->
+        <article class="bg-white rounded-xl overflow-hidden shadow-md blog-card-hover">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://picsum.photos/seed/blog3/600/400" alt="MATLAB在科学计算中的应用与优势" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="tag-pill bg-purple-100 text-purple-500">设计灵感</span>
+              <span class="text-sm text-gray-500"><i class="fa fa-calendar-o mr-1"></i> 2025-09-10</span>
+            </div>
+            <h2 class="text-xl font-bold mb-3 hover:text-primary transition-colors">
+              <a href="blog-post3.html">MATLAB在科学计算中的应用与优势</a>
+            </h2>
+            <p class="text-gray-600 mb-4 line-clamp-3">
+              MATLAB是一款强大的数值计算和可视化软件，广泛应用于科学研究、工程设计和数据分析等领域。 它以简洁的语法、丰富的工具箱和强大的计算能力，成为...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <img src="https://picsum.photos/seed/author1/100/100" alt="作者头像" class="w-10 h-10 rounded-full object-cover">
+                <span class="ml-3 text-sm font-medium"></span>
+              </div>
+              <a href="blog-post3.html" class="text-primary font-medium hover:underline inline-flex items-center">
+                 <i class="fa fa-long-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 博客文章4 -->
+        <article class="bg-white rounded-xl overflow-hidden shadow-md blog-card-hover">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://picsum.photos/seed/blog4/600/400" alt="JavaScript性能优化" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="tag-pill bg-blue-100 text-primary">前端开发</span>
+              <span class="text-sm text-gray-500"><i class="fa fa-calendar-o mr-1"></i> 2025-08-25</span>
+            </div>
+            <h2 class="text-xl font-bold mb-3 hover:text-primary transition-colors">
+              <a href="blog-post4.html">提升JavaScript性能的15个实用技巧</a>
+            </h2>
+            <p class="text-gray-600 mb-4 line-clamp-3">
+              JavaScript性能直接影响用户体验，尤其是在移动设备上。本文分享15个经过实践验证的JavaScript性能优化技巧，从代码层面到架构层面...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <img src="https://picsum.photos/seed/author1/100/100" alt="作者头像" class="w-10 h-10 rounded-full object-cover">
+                <span class="ml-3 text-sm font-medium"></span>
+              </div>
+              <a href="blog-post4.html" class="text-primary font-medium hover:underline inline-flex items-center">
+                <i class="fa fa-long-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 博客文章5 -->
+        <article class="bg-white rounded-xl overflow-hidden shadow-md blog-card-hover">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://picsum.photos/seed/blog5/600/400" alt="设计师必备工具" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="tag-pill bg-yellow-100 text-yellow-500">工具推荐</span>
+              <span class="text-sm text-gray-500"><i class="fa fa-calendar-o mr-1"></i> 2025-08-05</span>
+            </div>
+            <h2 class="text-xl font-bold mb-3 hover:text-primary transition-colors">
+              <a href="blog-post5.html">通信工程专业现状与发展趋势</a>
+            </h2>
+            <p class="text-gray-600 mb-4 line-clamp-3">
+              通信工程是一门不断发展和创新的学科，它涉及信息的传输、交换、处理和应用。 在当今数字化时代，通信技术已经成为社会经济发展的重要...
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <img src="https://picsum.photos/seed/author1/100/100" alt="作者头像" class="w-10 h-10 rounded-full object-cover">
+                <span class="ml-3 text-sm font-medium"></span>
+              </div>
+              <a href="blog-post5.html" class="text-primary font-medium hover:underline inline-flex items-center">
+                 <i class="fa fa-long-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+  <script>
+    // 移动端菜单切换
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+  </script>
+</body>
+</html>

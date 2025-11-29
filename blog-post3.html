@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MATLAB在科学计算中的应用 | 博客</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    .img-hover { transition: transform 0.4s ease; }
+    .img-hover:hover { transform: scale(1.02); }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- 导航栏 -->
+  <header class="fixed top-0 w-full bg-white shadow-sm z-50 text-sm">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="font-bold text-primary">
+        <i class="fa fa-code mr-1"></i>个人网站
+      </a>
+      
+      <!-- 导航链接 -->
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html" class="hover:text-primary">首页</a>
+        <a href="portfolio.html" class="hover:text-primary">作品集</a>
+        <a href="blog.html" class="text-primary">博客</a>
+        <a href="about.html" class="hover:text-primary">关于我</a>
+      </div>
+      
+      <!-- 移动端菜单 -->
+      <button id="menuBtn" class="md:hidden">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-md p-2">
+        <a href="index.html" class="block py-1 hover:text-primary">首页</a>
+        <a href="portfolio.html" class="block py-1 hover:text-primary">作品集</a>
+        <a href="blog.html" class="block py-1 text-primary">博客</a>
+        <a href="about.html" class="block py-1 hover:text-primary">关于我</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 返回按钮 -->
+  <section class="pt-18 pb-2">
+    <div class="container mx-auto px-4 text-xs">
+      <a href="blog.html" class="text-gray-600 hover:text-primary">
+        <i class="fa fa-arrow-left mr-1"></i> 返回博客
+      </a>
+    </div>
+  </section>
+
+  <!-- 博客文章内容 -->
+  <section class="py-3 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <!-- 文章标题与元信息 -->
+      <div class="mb-6">
+        <h1 class="text-xl md:text-2xl font-bold">MATLAB在科学计算中的应用与优势</h1>
+        <div class="flex items-center text-gray-500 text-xs mt-3">
+          <span><i class="fa fa-calendar-o mr-1"></i> 发布于 2025-11-05</span>
+          <span class="mx-2">|</span>
+          <span><i class="fa fa-folder-o mr-1"></i> 技术分享</span>
+        </div>
+      </div>
+      
+      <!-- 文章封面图 -->
+      <div class="mb-6 overflow-hidden rounded-lg">
+        <img src="https://picsum.photos/seed/matlab-science/800/400" alt="MATLAB科学计算" class="w-full img-hover">
+      </div>
+      
+      <!-- 文章正文 -->
+      <div class="text-gray-700 text-sm space-y-4">
+        <p>
+          MATLAB是一款强大的数值计算和可视化软件，广泛应用于科学研究、工程设计和数据分析等领域。
+          它以简洁的语法、丰富的工具箱和强大的计算能力，成为科研人员和工程师的得力助手。
+          本文将介绍MATLAB在科学计算中的主要应用场景及其独特优势。
+        </p>
+        
+        <h2 class="text-base font-bold mt-6">1. 数值计算与模拟</h2>
+        
+        <p>
+          MATLAB提供了丰富的数值计算函数，能够高效求解各种数学问题，包括线性代数方程组、微分方程、积分等。
+          例如，在物理学和工程学中，常需要对复杂的系统进行建模和仿真，MATLAB的数值计算能力可以快速得到准确的结果。
+        </p>
+        <p>
+          例如，使用MATLAB的`ode45`函数可以轻松求解常微分方程组，这在模拟物理过程（如弹簧振子、天体运动）时非常有用。
+        </p>
+        
+        <h2 class="text-base font-bold mt-6">2. 数据可视化</h2>
+        
+        <p>
+          数据可视化是科学计算的重要组成部分，MATLAB提供了强大的绘图功能，能够创建各种类型的图表，
+          如折线图、柱状图、散点图、三维曲面图等。通过直观的可视化，可以帮助研究人员更好地理解数据规律和模型结果。
+        </p>
+        <p>
+          例如，在数据分析中，使用`plot`函数可以快速绘制数据趋势图，使用`histogram`函数可以分析数据分布特征。
+        </p>
+        
+        <h2 class="text-base font-bold mt-6">3. 工具箱扩展</h2>
+        
+        <p>
+          MATLAB拥有众多专业工具箱，涵盖信号处理、图像处理、控制系统、机器学习等多个领域。
+          这些工具箱提供了现成的算法和函数，用户可以直接调用，大大提高了开发效率。
+        </p>
+        <ul class="list-disc pl-5 space-y-1 mt-2">
+          <li><strong>信号处理工具箱</strong>：用于信号滤波、频谱分析等。</li>
+          <li><strong>图像处理工具箱</strong>：用于图像增强、分割、识别等。</li>
+          <li><strong>机器学习工具箱</strong>：用于分类、回归、聚类等任务。</li>
+        </ul>
+
+        <h2 class="text-base font-bold mt-6">4. 跨学科应用</h2>
+        
+        <p>
+          MATLAB的应用范围非常广泛，不仅在工程领域（如机械、电子、航空航天）得到广泛应用，
+          还在生物学、医学、经济学等多个学科中发挥重要作用。例如，在生物信息学中，MATLAB可以用于基因序列分析；
+          在医学成像中，可以用于图像重建和分析。
+        </p>
+        
+        <h2 class="text-base font-bold mt-6">5. 优势总结</h2>
+        
+        <p>
+          相比其他编程语言（如Python、C++），MATLAB在科学计算中具有以下优势：
+        </p>
+        <ul class="list-disc pl-5 space-y-1 mt-2">
+          <li>语法简洁直观，易于学习和使用。</li>
+          <li>数值计算性能强大，内置大量优化算法。</li>
+          <li>绘图功能丰富，可视化效果美观。</li>
+          <li>工具箱齐全，支持多领域专业应用。</li>
+          <li>与硬件设备兼容性好，便于数据采集和实时控制。</li>
+        </ul>
+        
+        <h2 class="text-base font-bold mt-6">总结</h2>
+        
+        <p>
+          MATLAB作为一款专业的科学计算软件，在数值计算、数据可视化、跨学科研究等方面具有显著优势。
+          无论是科研人员还是工程师，掌握MATLAB的使用都能大大提升工作效率，推动研究和项目的进展。
+          如果你从事科学计算相关工作，不妨尝试使用MATLAB来解决问题，体验它带来的便利和高效。
+        </p>
+      </div>
+      
+      <!-- 文章标签 -->
+      <div class="mt-8 pt-4 border-t border-gray-200">
+        <h3 class="text-xs font-medium text-gray-500 mb-2">文章标签</h3>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full transition-colors">
+            MATLAB
+          </a>
+          <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full transition-colors">
+            科学计算
+          </a>
+          <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full transition-colors">
+            数据可视化
+          </a>
+          <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full transition-colors">
+            数值计算
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-800 text-white py-3 mt-6 text-xs text-center">
+    <p>© 2025 个人博客</p>
+  </footer>
+
+  <script>
+    // 移动端菜单切换
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

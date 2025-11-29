@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>从零开始学习网站制作 | 博客</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    .img-hover { transition: transform 0.4s ease; }
+    .img-hover:hover { transform: scale(1.02); }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- 导航栏 -->
+  <header class="fixed top-0 w-full bg-white shadow-sm z-50 text-sm">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="font-bold text-primary">
+        <i class="fa fa-code mr-1"></i>个人网站
+      </a>
+      
+      <!-- 导航链接 -->
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html" class="hover:text-primary">首页</a>
+        <a href="portfolio.html" class="hover:text-primary">作品集</a>
+        <a href="blog.html" class="text-primary">博客</a>
+        <a href="about.html" class="hover:text-primary">关于我</a>
+      </div>
+      
+      <!-- 移动端菜单 -->
+      <button id="menuBtn" class="md:hidden">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-md p-2">
+        <a href="index.html" class="block py-1 hover:text-primary">首页</a>
+        <a href="portfolio.html" class="block py-1 hover:text-primary">作品集</a>
+        <a href="blog.html" class="block py-1 text-primary">博客</a>
+        <a href="about.html" class="block py-1 hover:text-primary">关于我</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 返回按钮 -->
+  <section class="pt-18 pb-2">
+    <div class="container mx-auto px-4 text-xs">
+      <a href="blog.html" class="text-gray-600 hover:text-primary">
+        <i class="fa fa-arrow-left mr-1"></i> 返回博客
+      </a>
+    </div>
+  </section>
+
+  <!-- 博客文章内容 -->
+  <section class="py-3 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <!-- 文章标题与元信息 -->
+      <div class="mb-6">
+        <h1 class="text-xl md:text-2xl font-bold">从零开始学习网站制作</h1>
+        <div class="flex items-center text-gray-500 text-xs mt-3">
+          <span><i class="fa fa-calendar-o mr-1"></i> 发布于 2025-09-15</span>
+          <span class="mx-2">|</span>
+          <span><i class="fa fa-folder-o mr-1"></i> 学习经验</span>
+        </div>
+      </div>
+      
+      <!-- 文章封面图 -->
+      <div class="mb-6 overflow-hidden rounded-lg">
+        <img src="https://picsum.photos/seed/web-dev/800/400" alt="学习网站制作" class="w-full img-hover">
+      </div>
+      
+      <!-- 文章正文 -->
+      <div class="text-gray-700 text-sm space-y-4">
+        <p>
+          网站制作是一项有趣且实用的技能。从完全不懂代码到能够独立开发一个简单的网站，
+          我经历了一段充满挑战但收获满满的旅程。在这篇文章中，我想分享一下我的学习路径和一些心得体会，
+          希望能对那些也想入门网站制作的朋友有所帮助。
+        </p>
+        
+        <h2 class="text-base font-bold mt-6">1. 明确学习目标与方向</h2>
+        
+        <p>
+          在开始学习之前，首先要明确自己的目标。你是想做一个简单的个人博客，还是一个功能复杂的电商网站？
+          不同的目标会影响你的学习路径。对于初学者，建议从静态网站入手，因为它们结构相对简单，更容易上手。
+        </p>
+        
+        <h2 class="text-base font-bold mt-6">2. 学习前端基础</h2>
+        
+        <p>
+          前端是用户直接看到和交互的部分，是网站制作的基础。
+        </p>
+        <ul class="list-disc pl-5 space-y-1 mt-2">
+          <li><strong>HTML</strong>：网页的骨架，负责内容的结构和语义。</li>
+          <li><strong>CSS</strong>：网页的化妆师，负责内容的样式和布局。</li>
+          <li><strong>JavaScript</strong>：网页的大脑，负责实现交互效果和动态功能。</li>
+        </ul>
+        <p class="mt-2">
+          我建议先专注于HTML和CSS，把它们学扎实。可以通过W3Schools、MDN Web Docs等在线教程学习，
+          然后多做练习，比如模仿一些简单的网页布局。
+        </p>
+        
+        <h2 class="text-base font-bold mt-6">3. 学习后端基础（可选）</h2>
+        
+        <p>
+          如果你想制作动态网站（比如用户可以登录、发布内容），就需要学习后端知识。
+          后端负责处理数据、与数据库交互等服务器端的工作。
+        </p>
+        <p>
+          对于初学者，可以从一些简单的后端语言和框架入手，例如<strong>PHP</strong>或<strong>Node.js</strong>。
+          同样，在线教程和实践项目是学习的好方法。
+        </p>
+
+        <h2 class="text-base font-bold mt-6">4. 选择合适的工具和框架</h2>
+        
+        <p>
+          随着技术的发展，有很多优秀的工具和框架可以帮助你提高开发效率。
+        </p>
+        <ul class="list-disc pl-5 space-y-1 mt-2">
+          <li><strong>代码编辑器</strong>：如VS Code，功能强大且免费。</li>
+          <li><strong>CSS框架</strong>：如Bootstrap、Tailwind CSS，可以快速实现美观的布局。</li>
+          <li><strong>静态站点生成器</strong>：如Jekyll、Hexo，适合制作博客或文档网站。</li>
+        </ul>
+
+        <h2 class="text-base font-bold mt-6">5. 多实践，多动手</h2>
+        
+        <p>
+          网站制作是一门实践性很强的学科。光看书、看教程是不够的，一定要多动手写代码，多做项目。
+          可以从一个简单的个人主页开始，然后逐步增加功能。遇到问题时，多查资料，多问搜索引擎。
+        </p>
+        
+        <h2 class="text-base font-bold mt-6">6. 部署你的网站</h2>
+        
+        <p>
+          当你的网站制作完成后，就需要把它部署到互联网上，让其他人可以访问。
+          有很多免费或付费的平台可以选择，例如GitHub Pages、Netlify、Vercel等。
+        </p>
+        
+        <h2 class="text-base font-bold mt-6">总结</h2>
+        
+        <p>
+          学习网站制作是一个循序渐进的过程，不要急于求成。最重要的是保持兴趣和耐心，
+          不断学习和实践。希望我的分享能给你带来一些启发，祝你学习愉快！
+        </p>
+      </div>
+      
+      <!-- 文章标签 -->
+      <div class="mt-8 pt-4 border-t border-gray-200">
+        <h3 class="text-xs font-medium text-gray-500 mb-2">文章标签</h3>
+        <div class="flex flex-wrap gap-2">
+          <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full transition-colors">
+            网站制作
+          </a>
+          <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full transition-colors">
+            前端开发
+          </a>
+          <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full transition-colors">
+            学习经验
+          </a>
+          <a href="#" class="bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full transition-colors">
+            HTML/CSS
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-800 text-white py-3 mt-6 text-xs text-center">
+    <p>© 2025 个人网站</p>
+  </footer>
+
+  <script>
+    // 移动端菜单切换
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
